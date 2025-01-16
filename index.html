@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/ip-icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ip Tracker</title>
+	</head>
+	<body class="h-full">
+		<header class="flex items-center justify-center h-10 bg-purple-950 py-7">
+			<h1 class="text-center font-semibold text-white text-lg">IP TRACKER</h1>
+		</header>
+		<main class="py-11 px-6 bg-white">
+			<label class="input input-bordered flex items-center gap-2 pr-0 overflow-hidden">
+				<input id="ip-address" type="text" class="grow" placeholder="Search" />
+				<button id="btn" class="h-full px-3">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 16 16"
+						fill="currentColor"
+						class="h-4 w-4 opacity-70"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+							clip-rule="evenodd"
+						/>
+					</svg>
+				</button>
+			</label>
+			<div id="ip-data" class="mt-8">
+				<ul id="data " class="text-gray-700 font-semibold">
+					<li>
+						IP:
+						<p></p>
+					</li>
+					<li>
+						Ciudad:
+						<p></p>
+					</li>
+					<li>
+						Pais:
+						<p></p>
+					</li>
+					<li>
+						Region:
+						<p></p>
+					</li>
+					<li>
+						Codigo postal:
+						<p></p>
+					</li>
+					<li>
+						Zona horaria:
+						<p></p>
+					</li>
+					<li>
+						Idioma:
+						<p></p>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>
