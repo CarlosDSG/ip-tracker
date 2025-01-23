@@ -1,0 +1,10 @@
+latitude	
+longitude	
+countryName	
+countryCode	
+timeZone	
+zipCode	string	
+cityName	
+regionName	
+continent	
+continentCode

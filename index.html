@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="h-screen">
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/ip-icon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ip Tracker</title>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""
+		/>
 	</head>
-	<body class="h-full">
+	<body class="h-screen bg-white">
 		<header class="flex items-center justify-center h-10 bg-purple-950 py-7">
-			<h1 class="text-center font-semibold text-white text-lg">IP TRACKER</h1>
+			<h1 class="flex text-center font-semibold text-white text-lg">
+				<img class="w-6 mr-1.5" src="/internet-3-svgrepo-com.svg" alt="internet logo" /> IP TRACKER
+			</h1>
 		</header>
-		<main class="py-11 px-6 bg-white">
-			<label class="input input-bordered flex items-center gap-2 pr-0 overflow-hidden">
+		<main class="bg-white">
+			<label
+				id="ip-label"
+				class="max-w-xl input input-bordered flex items-center m-auto mt-12 gap-2 pr-0 overflow-hidden"
+			>
 				<input id="ip-address" type="text" class="grow" placeholder="Search" />
 				<button id="btn" class="h-full px-3">
 					<svg
@@ -28,39 +39,54 @@
 					</svg>
 				</button>
 			</label>
-			<div id="ip-data" class="mt-8">
-				<ul id="data " class="text-gray-700 font-semibold">
-					<li>
-						IP:
-						<p></p>
-					</li>
-					<li>
-						Ciudad:
-						<p></p>
-					</li>
-					<li>
-						Pais:
-						<p></p>
-					</li>
-					<li>
-						Region:
-						<p></p>
-					</li>
-					<li>
-						Codigo postal:
-						<p></p>
-					</li>
-					<li>
-						Zona horaria:
-						<p></p>
-					</li>
-					<li>
-						Idioma:
-						<p></p>
-					</li>
-				</ul>
-			</div>
+			<article id="info-container" class="mt-12 justify-between">
+				<div id="ip-data" class="mx-auto px-5">
+					<ul id="data " class="justify-between text-gray-900 [&>li]:flex [&>li]:mb-2">
+						<li>
+							Continent:
+							<p class="ml-2 font-medium" id="continent" class="ml-2"></p>
+						</li>
+
+						<li>
+							Country:
+							<p class="ml-2 font-medium" id="country"></p>
+						</li>
+						<li>
+							Region:
+							<p class="ml-2 font-medium" id="region"></p>
+						</li>
+						<li>
+							City:
+							<p class="ml-2 font-medium" id="city"></p>
+						</li>
+
+						<li>
+							Postal Code (zip):
+							<p class="ml-2 font-medium" id="postalCode"></p>
+						</li>
+
+						<li>
+							Language:
+							<p class="ml-2 font-medium" id="language"></p>
+						</li>
+						<li>
+							Time zone:
+							<p class="ml-2 font-medium" id="timeZone"></p>
+						</li>
+						<li>
+							Currency:
+							<p id="currency" class="font-medium"></p>
+						</li>
+					</ul>
+				</div>
+				<div id="map"></div>
+			</article>
 		</main>
 		<script type="module" src="/src/main.js"></script>
+		<script
+			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+			crossorigin=""
+		></script>
 	</body>
 </html>
