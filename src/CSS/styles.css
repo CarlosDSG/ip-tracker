@@ -12,18 +12,6 @@
 	outline-offset: 0px; /* Desplazamiento al borde del elemento */
 }
 
-picture > img {
-	border-right: 1.5px solid #cccccc;
-	border-top: 1.5px solid #cccccc;
-	border-top-width: 1rem;
-	border-radius: 2px;
-}
-
-/* #map {
-	height: 320px;
-	width: 500px;
-} */
-
 @media only screen and (min-width: 385px) {
 	#map {
 		height: 400px;
@@ -32,11 +20,32 @@ picture > img {
 		margin-inline: auto;
 	}
 }
-
-@media only screen and (min-width: 600px) {
+li {
+	display: flex;
+}
+p {
+	margin-left: 8px;
+}
+@media only screen and (min-width: 546px) {
 	#map {
 		height: 320px;
-		width: 600px;
+		width: 500px;
+	}
+}
+@media only screen and (min-width: 799px) {
+	ul {
+		display: flex;
+	}
+	li {
+		display: block;
 		margin: 0;
+	}
+	p {
+		margin: 0;
+		font-size: 14px;
+	}
+	#map {
+		height: 320px;
+		width: 700px;
 	}
 }
